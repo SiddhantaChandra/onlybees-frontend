@@ -14,13 +14,13 @@ const EventCTASection = () => {
         priority
       />
 
-      <div className="flex flex-1 w-full items-center justify-between rounded-2xl bg-secondary px-8 py-6 text-white">
+      <div className="flex flex-col flex-1 w-full justify-between rounded-2xl bg-secondary gap-4 px-8 py-6 text-white lg:flex-row lg:items-center">
         <div>
           <p className="text-xs uppercase tracking-widest text-gray-400">
             Starting
           </p>
           <div className="flex items-baseline gap-2">
-            <span className="text-4xl font-bold leading-tight">
+            <span className="text-6xl lg:text-4xl font-bold leading-tight">
               ₹799
             </span>
           </div>
@@ -28,7 +28,7 @@ const EventCTASection = () => {
 
         <button
           type="button"
-          className="group inline-flex items-center gap-3 rounded-full bg-accent px-6 py-4 text-base font-semibold text-black transition duration-100 hover:scale-[1.05]"
+          className="flex flex-1 group items-center justify-center gap-3 rounded-full bg-accent px-6 py-4 text-base font-semibold text-black transition duration-100 hover:scale-[1.05]"
         >
           Book Now
           <Play height="14" fill="#000" />
