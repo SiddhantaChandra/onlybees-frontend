@@ -9,8 +9,8 @@ const EventTabs = ({ tabs = defaultTabs }) => {
   const currentTab = tabs.find((tab) => tab.id === activeTab) ?? tabs[0];
 
   return (
-    <div className="mt-10 w-full">
-      <div className="flex justify-between border-b border-white/40">
+    <div className="mt-10">
+      <div className="flex justify-between border-b border-white/40 overflow-x-auto no-scrollbar">
         {tabs.map((tab) => {
           const isActive = tab.id === activeTab;
           return (
@@ -30,14 +30,15 @@ const EventTabs = ({ tabs = defaultTabs }) => {
         })}
       </div>
 
-      <div className="mt-5 max-h-76 rounded-2xl bg-secondary p-4 px-4 text-sm overflow-scroll no-scrollbar">
+      <div className="flex-1 mt-5 w-full lg:max-h-68 rounded-2xl bg-secondary p-4 text-sm font-light overflow-auto no-scrollbar">
         {currentTab?.image && (
-          <div className=" flex justify-center items-center">
+          <div className="flex justify-center items-center">
             <Image
               src={currentTab.image}
               alt={currentTab.imageAlt ?? "Venue layout"}
               width={350}
               height={350}
+              className="h-auto w-full max-w-[350px]"
               priority={currentTab.id === "layout"}
             />
           </div>

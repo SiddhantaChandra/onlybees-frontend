@@ -233,7 +233,7 @@ const TicketsPage = () => {
           <div className="w-full max-w-130 rounded-2xl">
             <div className="relative w-full height-[50%]">
               <Image
-                src="/Stage.png"
+                src="/Stage.webp"
                 alt="Venue layout"
                 height={800}
                 width={800}

@@ -5,9 +5,9 @@ import { Play } from "lucide-react";
 
 const EventCTASection = () => {
   return (
-    <div className="flex flex-col items-center gap-6">
+    <div className="flex flex-col items-center gap-6 w-full flex-1 min-w-0 lg:basis-1/2">
       <Image
-        className="rounded-2xl"
+        className="rounded-2xl w-full max-w-xl h-auto"
         src={"/mohombi_flyer.webp"}
         alt="Mohombi Flyer"
         width={900}

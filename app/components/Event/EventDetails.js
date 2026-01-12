@@ -4,7 +4,7 @@ import { MapPin } from "lucide-react";
 
 const EventDetails = () => {
   return (
-    <div className="flex flex-col max-w-full lg:min-w-[50%] lg:max-w-[55%]">
+    <div className="flex flex-col w-full flex-1 min-w-0 lg:basis-3/5">
       <div className="lg:text-right lg:p-0 mg:ml-0 ml-3 leading-8">
         <div className="flex items-center lg:justify-end gap-1">
           <MapPin height={18}  className="text-accent" />
@@ -18,9 +18,7 @@ const EventDetails = () => {
         </p>
         <p>Shillong</p>
       </div>
-      <div className="w-full max-w-full">
         <EventTabs />
-      </div>
     </div>
   );
 };
