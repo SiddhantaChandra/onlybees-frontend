@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import CancelPaymentModal from "../components/Common/CancelPaymentModal";
 
 const currency = (n) => `₹${n || 0}`;
 
@@ -9,6 +11,8 @@ const Checkout = ({ items = [], totals = { subtotal: 0, gst: 0, bookingFees: 0, 
   const hasItems = (items || []).length > 0;
 
   const [timeLeft, setTimeLeft] = useState(600);
+  const [showCancelModal, setShowCancelModal] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     setTimeLeft(600);
@@ -37,19 +41,21 @@ const Checkout = ({ items = [], totals = { subtotal: 0, gst: 0, bookingFees: 0, 
 
   return (
     <div className="min-h-screen bg-background text-foreground px-4 md:px-10 pt-24 pb-32">
+      <button
+        aria-label="Cancel payment"
+        onClick={() => setShowCancelModal(true)}
+        className="fixed top-6 right-6 z-40 h-10 w-10 rounded-full bg-white text-black text-xl font-semibold flex items-center justify-center shadow-md transition-transform hover:scale-105"
+      >
+        ×
+      </button>
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-10">
         <div className="flex-1">
           <div className="flex items-center justify-between mb-6">
-            <h1 className="text-3xl md:text-4xl font-extrabold text-accent tracking-tight">CHECKOUT</h1>
+            <div className="flex items-center gap-3">
+              <h1 className="text-3xl md:text-4xl font-extrabold text-accent tracking-tight">CHECKOUT</h1>
+            </div>
             <div className="flex items-center gap-3">
               <span className="text-sm text-accent">Time left: {formatTime(timeLeft)}</span>
-              <button
-                aria-label="Close checkout"
-                onClick={onBack}
-                className="h-9 w-9 rounded-full border border-white/20 text-white hover:bg-white/10"
-              >
-                ×
-              </button>
             </div>
           </div>
 
@@ -166,6 +172,12 @@ const Checkout = ({ items = [], totals = { subtotal: 0, gst: 0, bookingFees: 0, 
           Checkout
         </button>
       </div>
+
+      <CancelPaymentModal
+        isOpen={showCancelModal}
+        onCancel={() => setShowCancelModal(false)}
+        onConfirm={() => router.push("/")}
+      />
     </div>
   );
 };
