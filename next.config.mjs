@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['concerts.onlybees.in'],
+    domains: ['concerts.onlybees.in', 'concertsapi.onlybees.in/api/sections/availability'],
   },
 };
 
