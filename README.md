@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# OnlyBees — Frontend Assignment
 
-## Getting Started
+Live demo: https://onlybees-frontend.vercel.app/
 
-First, run the development server:
+## Overview
+
+OnlyBees is a modern frontend built with Next.js. This repository contains the frontend for the OnlyBees assignment, including pages for events and ticket checkout flows.
+
+## Quick start
+
+Prerequisites:
+
+- Node.js (16+ recommended)
+- npm (or use a compatible package manager)
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build for production:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project structure
 
-## Learn More
+- `app/` — Next.js app directory (pages, components, API routes)
+- `public/` — static assets
+- `components/` — reusable React components and UI building blocks
+- `tickets/` — ticketing and checkout pages
 
-To learn more about Next.js, take a look at the following resources:
+## AI-assisted work
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project used AI to accelerate initial development and content structuring:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Project bootstrapping — reduced boilerplate and assisted with font/tailwind setup.
+2. Content structuring — converted static tabbed content (About, Terms & Conditions, FAQ) into a structured `TabsData.js` for easier rendering.
+3. UI scaffolding — provided an initial footer component structure.
+4. Page skeletons — created base layouts for Tickets and Checkout pages that were refined manually.
+5. General — VSCode tabbed completions were used thoughout this project as well as general help understanding tailwind-config changes introduced in ~v4.
+6. Documentation — helped draft this README.
