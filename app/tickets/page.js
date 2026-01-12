@@ -20,7 +20,7 @@ const TicketsPage = () => {
   useEffect(() => {
     const loadSections = async () => {
       try {
-        const res = await fetch("https://concertsapi.onlybees.in/api/sections/availability", {
+        const res = await fetch("/api/sections", {
           cache: "no-store",
         });
 
@@ -81,7 +81,7 @@ const TicketsPage = () => {
 
     setLoading(true);
     try {
-      const res = await fetch("https://concertsapi.onlybees.in/api/sections/availability", {
+      const res = await fetch("/api/sections", {
         cache: "no-store",
       });
       if (!res.ok) throw new Error("Unable to verify availability.");
