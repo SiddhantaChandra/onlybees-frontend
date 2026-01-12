@@ -38,7 +38,6 @@ const EventTabs = ({ tabs = defaultTabs }) => {
               alt={currentTab.imageAlt ?? "Venue layout"}
               width={350}
               height={350}
-              className="h-auto w-full max-w-[350px]"
               priority={currentTab.id === "layout"}
             />
           </div>

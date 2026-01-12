@@ -14,7 +14,7 @@ export const tabs = [
   {
     id: "layout",
     label: "Venue Layout",
-    image: "/stage.webp",
+    image: "/Stage.webp",
     imageAlt: "Venue layout map",
   },
   {
