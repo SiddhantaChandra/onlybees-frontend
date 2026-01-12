@@ -32,13 +32,12 @@ const EventTabs = ({ tabs = defaultTabs }) => {
 
       <div className="mt-5 max-h-76 rounded-2xl bg-secondary p-4 px-4 text-sm overflow-scroll no-scrollbar">
         {currentTab?.image && (
-          <div className="w-full">
+          <div className=" flex justify-center items-center">
             <Image
               src={currentTab.image}
               alt={currentTab.imageAlt ?? "Venue layout"}
-              width={400}
-              height={400}
-              className="h-auto w-full"
+              width={350}
+              height={350}
               priority={currentTab.id === "layout"}
             />
           </div>

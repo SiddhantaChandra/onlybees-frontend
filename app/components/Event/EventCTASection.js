@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Play } from "lucide-react";
 
 const EventCTASection = () => {
@@ -26,13 +27,13 @@ const EventCTASection = () => {
           </div>
         </div>
 
-        <button
-          type="button"
+        <Link
+          href="/tickets"
           className="flex flex-1 group items-center justify-center gap-3 rounded-full bg-accent px-6 py-4 text-base font-semibold text-black transition duration-100 hover:scale-[1.05]"
         >
           Book Now
           <Play height="14" fill="#000" />
-        </button>
+        </Link>
       </div>
     </div>
   );
