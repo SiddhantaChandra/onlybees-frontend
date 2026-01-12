@@ -2,16 +2,8 @@
 
 Live demo: https://onlybees-frontend.vercel.app/
 
-## Overview
-
-OnlyBees is a modern frontend built with Next.js. This repository contains the frontend for the OnlyBees assignment, including pages for events and ticket checkout flows.
 
 ## Quick start
-
-Prerequisites:
-
-- Node.js (16+ recommended)
-- npm (or use a compatible package manager)
 
 Install dependencies:
 
@@ -31,13 +23,6 @@ Build for production:
 npm run build
 npm start
 ```
-
-## Project structure
-
-- `app/` — Next.js app directory (pages, components, API routes)
-- `public/` — static assets
-- `components/` — reusable React components and UI building blocks
-- `tickets/` — ticketing and checkout pages
 
 ## AI-assisted work
 
